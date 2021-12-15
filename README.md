@@ -8,7 +8,9 @@ Docker image with Ruby and the Workato Connector SDK pre installed
 docker run \
   --env WORKATO_API_EMAIL="my-email" \
   --env WORKATO_API_TOKEN="my-token" \
-  ghcr.io/safetyculture/workato-connector-sdk:latest \
+  -v $(pwd):/usr/src/connector \
+  --workdir /usr/src/connector \
+  ghcr.io/safetyculture/workato-connector-sdk:0.3.0
   help
 ```
 
