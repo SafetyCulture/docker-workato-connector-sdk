@@ -9,6 +9,7 @@ WORKATO_SDK_VERSION=$(curl https://api.github.com/repos/workato/workato-connecto
 
 docker buildx build \
   --platform "$PLATFORM" \
+  --push \
   --build-arg WORKATO_SDK_VERSION="$WORKATO_SDK_VERSION" \
   . \
   -t "$REPOSITORY/workato-connector-sdk:$WORKATO_SDK_VERSION" \
