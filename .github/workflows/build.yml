@@ -1,13 +1,13 @@
 # yamllint disable rule:line-length
 ---
-name: Build
+name: Build latest version
 
 # yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
 
 jobs:
-  protoc:
+  build:
     runs-on: ubuntu-latest
     permissions:
       packages: write
